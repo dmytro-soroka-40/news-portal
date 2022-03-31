@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 45px 0;
+  margin-bottom: 50px;
+
+  &__logo {
+    font-size: 25px;
+    font-weight: 500;
+
+    color: var(--main-color);
+  }
+
+  &__menu {
+    a {
+      margin-left: 35px;
+
+      font-size: 20px;
+      font-weight: 400;
+
+      transition: color 0.4s ease;
+
+      &.header__active {
+        color: var(--main-color);
+      }
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+
+      &:hover {
+        color: var(--main-color);
+
+        transition: color 0.4s ease;
+      }
+    }
+  }
+}

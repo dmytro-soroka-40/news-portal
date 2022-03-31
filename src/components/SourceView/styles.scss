@@ -1,0 +1,15 @@
+.source {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: rgba(51, 61, 81, 0.5);
+
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: var(--main-color);
+
+    transition: color 0.2s ease-in-out;
+  }
+}

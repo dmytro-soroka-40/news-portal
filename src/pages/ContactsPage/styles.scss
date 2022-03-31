@@ -1,0 +1,54 @@
+.contacts-page {
+  display: flex;
+  justify-content: space-between;
+
+  .contacts__info {
+    width: 50%;
+
+    .contacts__phone {
+      display: block;
+      margin-bottom: 50px;
+
+      font-size: 50px;
+
+      color: var(--main-color);
+    }
+
+    .contacts__name {
+      margin-bottom: 25px;
+      padding-left: 23px;
+
+      font-size: 25px;
+
+      border-left: 1px solid var(--main-color);
+    }
+
+    .contacts__mail {
+      display: block;
+      margin-bottom: 52px;
+
+      font-size: 20px;
+      text-decoration: none;
+
+      color: var(--main-text-color);
+    }
+
+    .contacts__position {
+      margin-bottom: 25px;
+
+      font-size: 20px;
+
+      color: rgba(51, 61, 81, 0.5);
+    }
+
+    .contacts__tech {
+      font-size: 20px;
+    }
+  }
+  .contacts__img {
+    width: 50%;
+    height: auto;
+
+    object-fit: cover;
+  }
+}
