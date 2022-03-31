@@ -7,7 +7,7 @@ import './styles.scss';
 
 const ContactsPage = () => {
   return (
-    <div className="contactsPage">
+    <section className="contactsPage">
       <div className="info">
         <div className="phone">
           <a href="tel:+380631907057"> +38 (063) 19 07 057</a>
@@ -25,7 +25,7 @@ const ContactsPage = () => {
       <div className="img">
         <img src={DmytroImg} alt="DmytroSoroka" />
       </div>
-    </div>
+    </section>
   );
 };
 
