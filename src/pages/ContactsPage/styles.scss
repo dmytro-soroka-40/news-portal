@@ -1,0 +1,45 @@
+.contactsPage {
+  display: flex;
+  justify-content: space-between;
+  .info {
+    width: 50%;
+    .phone {
+      a {
+        font-size: 60px;
+        color: #004fec;
+      }
+      margin-bottom: 50px;
+    }
+    .name {
+      padding-left: 23px;
+      border-left: 1px solid #004fec;
+      font-size: 25px;
+      margin-bottom: 25px;
+    }
+    .mail {
+      a {
+        text-decoration: none;
+        color: #333d51;
+        font-size: 20px;
+      }
+      margin-bottom: 52px;
+    }
+    .position {
+      color: rgba(51, 61, 81, 0.5);
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+    .tech {
+      font-size: 20px;
+    }
+  }
+  .img {
+    width: 50%;
+    img {
+      width: 100%;
+      min-width: 540px;
+      height: 340px;
+      object-fit: cover;
+    }
+  }
+}
