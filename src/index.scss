@@ -1,0 +1,23 @@
+:root {
+  --main-color: #69a5ac;
+  --main-text-color: #333d51;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', 'Tahoma', sans-serif;
+
+  color: var(--main-text-color);
+}
+
+a {
+  text-decoration: none;
+
+  color: var(--main-text-color);
+}

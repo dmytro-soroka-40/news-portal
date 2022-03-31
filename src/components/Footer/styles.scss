@@ -1,20 +1,24 @@
-.mainFooter {
+.footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex: 0 0 auto;
+  margin-top: 50px;
   padding: 45px 0;
 
-  div {
+  &__big {
     font-size: 25px;
-    font-weight: 700;
+    font-weight: 500;
 
-    &.small {
-      font-size: 15px;
-      font-weight: 400;
+    color: var(--main-color);
+  }
 
-      &:last-child {
-        text-align: right;
-      }
+  &__small {
+    font-size: 15px;
+    font-weight: 400;
+
+    &:last-of-type {
+      text-align: right;
     }
   }
 }

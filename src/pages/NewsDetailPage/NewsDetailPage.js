@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import routeMain from './routes';
 import { useParams } from 'react-router-dom';
-
-import getNews from '../../services/getNews';
-
-import './styles.scss';
+import routeDetail from './routes';
 import DateView from '../../components/DateView/DateView';
+import Loader from '../../components/Loader/Loader';
+import getNews from '../../services/getNews';
+import './styles.scss';
+import SourceView from '../../components/SourceView/SourceView';
 
 const NewsDetailPage = () => {
   const { id } = useParams();
@@ -18,26 +18,32 @@ const NewsDetailPage = () => {
   }, [id]);
 
   return (
-    <section className="newsDetailPage">
+    <section className="newsDetail-page">
       {news ? (
-        <div className="newsDetailWrapper">
-          <div className="leftPart">
-            <h1 className="title">{news.title}</h1>
-            <p className="source">{news.clean_url}</p>
-            <DateView date={news.published_date} />
+        <div className="newsDetail__wrapper">
+          <div className="newsDetail__left">
+            <h1 className="newsDetail__title">{news.title}</h1>
+            <div className="newsDetail__info">
+              <SourceView link={news.clean_url} />
+              <DateView date={news.published_date} />
+            </div>
           </div>
-          <div className="rightPart">
-            <img src={news.media} alt={news.title} />
-            <p className="summary">{news.summary}</p>
+          <div className="newsDetail__right">
+            <img
+              src={news.media}
+              className="newsDetail__img"
+              alt={news.title}
+            />
+            <p className="newsDetail__text">{news.summary}</p>
           </div>
         </div>
       ) : (
-        <></>
+        <Loader />
       )}
     </section>
   );
 };
 
-export { routeMain };
+export { routeDetail };
 
 export default NewsDetailPage;

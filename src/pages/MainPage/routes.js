@@ -1,3 +1,3 @@
-const routeNewsDetail = () => '/main';
+const routeMain = () => '/main';
 
-export default routeNewsDetail;
+export default routeMain;

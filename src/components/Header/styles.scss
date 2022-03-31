@@ -1,24 +1,27 @@
-.mainHeader {
+.header {
   display: flex;
   justify-content: space-between;
   padding: 45px 0;
-  margin-bottom: 90px;
+  margin-bottom: 50px;
 
-  .title {
+  &__logo {
     font-size: 25px;
-    font-weight: 700;
+    font-weight: 500;
+
+    color: var(--main-color);
   }
-  nav {
+
+  &__menu {
     a {
       margin-left: 35px;
 
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 400;
 
       transition: color 0.4s ease;
 
-      &.link-active {
-        color: #004fec;
+      &.header__active {
+        color: var(--main-color);
       }
 
       &:first-of-type {
@@ -26,7 +29,7 @@
       }
 
       &:hover {
-        color: #004fec;
+        color: var(--main-color);
 
         transition: color 0.4s ease;
       }

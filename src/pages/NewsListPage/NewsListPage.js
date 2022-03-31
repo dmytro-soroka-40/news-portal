@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import routeMain from './routes';
+import routeNewsList from './routes';
 import PageTitle from '../../components/PageTitle/PageTitle';
-
 import NewsList from '../../components/NewsList/NewsList';
-
+import Loader from '../../components/Loader/Loader';
 import getNews from '../../services/getNews';
-
-import './styles.scss';
 
 const NewsListPage = () => {
   const [newsList, setNewsList] = useState([]);
@@ -18,19 +15,19 @@ const NewsListPage = () => {
   }, []);
 
   return (
-    <section className="mainPage">
+    <section className="newslist-page">
       <PageTitle
         title={
-          <h2>
-            Будь <br /> на хвилі <span>подій</span>
-          </h2>
+          <>
+            Be on <br /> the wave <span>of events</span>
+          </>
         }
       />
-      {newsList.length > 0 && <NewsList list={newsList} />}
+      {newsList.length > 0 ? <NewsList list={newsList} /> : <Loader />}
     </section>
   );
 };
 
-export { routeMain };
+export { routeNewsList };
 
 export default NewsListPage;

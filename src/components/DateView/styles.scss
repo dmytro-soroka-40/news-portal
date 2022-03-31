@@ -1,9 +1,11 @@
-.dateView {
-  .day {
+.news__date {
+  .news__day {
     font-size: 30px;
   }
-  .month {
-    font-style: 20px;
+
+  .news__month {
+    font-size: 20px;
+
     color: rgba(51, 61, 81, 0.5);
   }
 }

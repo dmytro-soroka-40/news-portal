@@ -1,15 +1,13 @@
 import React from 'react';
-
 import NewsItem from '../NewsItem/NewsItem';
-
 import './styles.scss';
 
 const NewsList = ({ list }) => (
-  <div className="newsList">
+  <ul className="news">
     {list.map((news) => {
-      return <NewsItem key={news._id} item={news} />;
+      return <NewsItem item={news} key={news._id} />;
     })}
-  </div>
+  </ul>
 );
 
 export default NewsList;

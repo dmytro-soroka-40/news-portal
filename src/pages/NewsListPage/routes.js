@@ -1,3 +1,3 @@
-const routeMain = () => '/newsList';
+const routeNewsList = () => '/newsList';
 
-export default routeMain;
+export default routeNewsList;

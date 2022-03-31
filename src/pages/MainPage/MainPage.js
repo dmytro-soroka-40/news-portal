@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import PageTitle from '../../components/PageTitle/PageTitle';
 import routeMain from './routes';
-
+import PageTitle from '../../components/PageTitle/PageTitle';
 import NewsList from '../../components/NewsList/NewsList';
-
+import Loader from '../../components/Loader/Loader';
 import getNews from '../../services/getNews';
-
-import './styles.scss';
 
 const MainPage = () => {
   const [newsList, setNewsList] = useState([]);
@@ -18,15 +15,19 @@ const MainPage = () => {
   }, []);
 
   return (
-    <section className="mainPage">
+    <section className="main-page">
       <PageTitle
         title={
-          <h2>
-            Завжди <br /> свіжі <span>новини</span>
-          </h2>
+          <>
+            Always <br /> fresh <span>news</span>
+          </>
         }
       />
-      {newsList.length > 0 && <NewsList list={newsList.slice(0, 6)} />}
+      {newsList.length > 0 ? (
+        <NewsList list={newsList.slice(0, 6)} />
+      ) : (
+        <Loader />
+      )}
     </section>
   );
 };

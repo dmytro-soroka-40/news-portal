@@ -1,34 +1,29 @@
 import React from 'react';
-import routeMain from './routes';
-
-import DmytroImg from '../../assets/img/img.jpeg';
-
+import routeContacts from './routes';
+import Img from '../../assets/img/img.jpeg';
 import './styles.scss';
 
 const ContactsPage = () => {
   return (
-    <section className="contactsPage">
-      <div className="info">
-        <div className="phone">
-          <a href="tel:+380631907057"> +38 (063) 19 07 057</a>
+    <section className="contacts-page">
+      <div className="contacts__info">
+        <a className="contacts__phone" href="tel:+380631907057">
+          +38 (063) 19 07 057
+        </a>
+        <div className="contacts__name">
+          Dmytro <br />
+          Soroka
         </div>
-        <div className="name">
-          Дмитро <br />
-          Сорока
-        </div>
-        <div className="mail">
-          <a href="mailto:dima.soroka40@gmail.com">dima.soroka40@gmail.com</a>
-        </div>
-        <div className="position">FrontEnd Developer</div>
-        <div className="tech">HTML CSS JS REACT</div>
+        <a className="contacts__mail" href="mailto:dima.soroka40@gmail.com">
+          dima.soroka40@gmail.com
+        </a>
+        <div className="contacts__position">Front-End Developer</div>
+        <div className="contacts__tech">Html, Css, Js, React, Redux</div>
       </div>
-      <div className="img">
-        <img src={DmytroImg} alt="DmytroSoroka" />
-      </div>
+      <img src={Img} className="contacts__img" alt="DmytroSoroka" />
     </section>
   );
 };
 
-export { routeMain };
-
+export { routeContacts };
 export default ContactsPage;

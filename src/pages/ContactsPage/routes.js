@@ -1,3 +1,3 @@
-const routeMain = () => '/contacts';
+const routeContacts = () => '/contacts';
 
-export default routeMain;
+export default routeContacts;

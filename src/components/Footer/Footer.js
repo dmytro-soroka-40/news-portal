@@ -1,20 +1,17 @@
 import React from 'react';
 import './styles.scss';
 
-const Footer = () => {
-  return (
-    <footer className="mainFooter">
-      <div>
-        Новинник
-        <div className="small">Single Page Application</div>
-      </div>
-      <div className="small">Дипломна робота</div>
-      <div>
-        <div className="small">Made by</div>
-        Дмитро Сорока
-      </div>
-    </footer>
-  );
-};
+const Footer = () => (
+  <footer className="footer">
+    <div className="footer__left">
+      <p className="footer__big">News-week</p>
+      <p className="footer__small">Single Page Application</p>
+    </div>
+    <div className="footer__right">
+      <p className="footer__small">Made by</p>
+      <p className="footer__big">Dmytro Soroka</p>
+    </div>
+  </footer>
+);
 
 export default Footer;

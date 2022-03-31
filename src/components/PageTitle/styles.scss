@@ -1,12 +1,10 @@
-.pageTitle {
+.title {
   margin: 0 0 75px;
 
-  h2 {
-    font-size: 60px;
-    font-weight: 400;
+  font-size: 60px;
+  font-weight: 400;
 
-    span {
-      color: #004fec;
-    }
+  span {
+    color: var(--main-color);
   }
 }

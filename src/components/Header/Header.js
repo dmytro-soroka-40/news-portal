@@ -1,30 +1,27 @@
 import React from 'react';
-
 import { NavLink } from 'react-router-dom';
-
-import { routeMain as routeMainPage } from '../../pages/MainPage/MainPage';
-import { routeMain as routeContactsPage } from '../../pages/ContactsPage/ContactsPage';
-import { routeMain as routeNewsListPage } from '../../pages/NewsListPage/NewsListPage';
-
+import { routeMain } from '../../pages/MainPage/MainPage';
+import { routeContacts } from '../../pages/ContactsPage/ContactsPage';
+import { routeNewsList } from '../../pages/NewsListPage/NewsListPage';
 import './styles.scss';
 
-const Header = () => {
-  return (
-    <header className="mainHeader">
-      <div className="title">Новинник</div>
-      <nav>
-        <NavLink to={routeMainPage()} activeClassName={'link-active'}>
-          Головна
-        </NavLink>
-        <NavLink to={routeNewsListPage()} activeClassName={'link-active'}>
-          Новини
-        </NavLink>
-        <NavLink to={routeContactsPage()} activeClassName={'link-active'}>
-          Контакти
-        </NavLink>
-      </nav>
-    </header>
-  );
-};
+const Header = () => (
+  <header className="header">
+    <NavLink to={routeMain()} className="header__logo">
+      News-week
+    </NavLink>
+    <nav className="header__menu">
+      <NavLink to={routeMain()} activeClassName={'header__active'}>
+        Main
+      </NavLink>
+      <NavLink to={routeNewsList()} activeClassName={'header__active'}>
+        News
+      </NavLink>
+      <NavLink to={routeContacts()} activeClassName={'header__active'}>
+        Contacts
+      </NavLink>
+    </nav>
+  </header>
+);
 
 export default Header;
