@@ -7,13 +7,19 @@ import getNews from '../../services/getNews';
 import './styles.scss';
 import SourceView from '../../components/SourceView/SourceView';
 
+import { Iid } from 'types/IID';
+import { INewsDetail } from 'types/INewsDetail';
+
 const NewsDetailPage = () => {
-  const { id } = useParams();
-  const [news, setNews] = useState(null);
+  const { id } = useParams<Iid>();
+  const [news, setNews] = useState<INewsDetail | null>(null);
 
   useEffect(() => {
     getNews().then((response) => {
-      setNews(response.data.articles.find((item) => item._id === id));
+      const currentNews = response.data.articles?.find(
+        (item: INewsDetail) => item._id === id
+      );
+      setNews(currentNews);
     });
   }, [id]);
 

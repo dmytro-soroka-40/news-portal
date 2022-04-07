@@ -1,7 +1,7 @@
-import axios from 'axios';
+import axios, { AxiosResponse, AxiosRequestConfig } from 'axios';
 
-const getNews = () => {
-  const options = {
+const getNews = (): Promise<AxiosResponse> => {
+  const options: AxiosRequestConfig = {
     method: 'GET',
     url: 'https://free-news.p.rapidapi.com/v1/search',
     params: { q: 'Elon Musk', lang: 'en' },

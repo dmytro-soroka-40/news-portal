@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import routeNewsList from './routes';
+import routeMain from './routes';
 import PageTitle from '../../components/PageTitle/PageTitle';
 import NewsList from '../../components/NewsList/NewsList';
 import Loader from '../../components/Loader/Loader';
 import getNews from '../../services/getNews';
 
-const NewsListPage = () => {
-  const [newsList, setNewsList] = useState([]);
+import { INewsDetail } from 'types/INewsDetail';
+
+const MainPage = () => {
+  const [newsList, setNewsList] = useState<INewsDetail[]>([]);
 
   useEffect(() => {
     getNews().then((response) => {
@@ -15,19 +17,23 @@ const NewsListPage = () => {
   }, []);
 
   return (
-    <section className="newslist-page">
+    <section className="main-page">
       <PageTitle
         title={
           <>
-            Be on <br /> the wave <span>of events</span>
+            Always <br /> fresh <span>news</span>
           </>
         }
       />
-      {newsList.length > 0 ? <NewsList list={newsList} /> : <Loader />}
+      {newsList.length > 0 ? (
+        <NewsList list={newsList.slice(0, 6)} />
+      ) : (
+        <Loader />
+      )}
     </section>
   );
 };
 
-export { routeNewsList };
+export { routeMain };
 
-export default NewsListPage;
+export default MainPage;

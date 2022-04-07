@@ -2,7 +2,11 @@ import React from 'react';
 import prepareDate from '../../utils/prepareDate';
 import './styles.scss';
 
-const DateView = ({ date }) => {
+interface IDateViewParams {
+  date: string;
+}
+
+const DateView: React.FC<IDateViewParams> = ({ date }) => {
   const { day, month } = prepareDate(date);
 
   return (

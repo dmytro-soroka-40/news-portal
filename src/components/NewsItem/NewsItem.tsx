@@ -5,7 +5,13 @@ import DateView from '../DateView/DateView';
 import SourceView from '../SourceView/SourceView';
 import './styles.scss';
 
-const NewsItem = ({ item }) => (
+import { INewsDetail } from 'types/INewsDetail';
+
+interface INewsItemParams {
+  item: INewsDetail;
+}
+
+const NewsItem: React.FC<INewsItemParams> = ({ item }) => (
   <li className="news__item">
     <NavLink to={routeDetail(item._id)} className="news__title">
       {item.title}

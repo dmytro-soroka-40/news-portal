@@ -1,6 +1,6 @@
-const prepareDate = (time) => {
+const prepareDate = (time: string) => {
   const newDate = new Date(time);
-  const checkDate = (date) => (date < 10 ? `0${date}` : date);
+  const checkDate = (date: number) => (date < 10 ? `0${date}` : date);
 
   return {
     day: checkDate(newDate.getDay()),
